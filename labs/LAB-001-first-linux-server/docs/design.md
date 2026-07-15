@@ -87,6 +87,107 @@ Future laboratories may introduce other distributions, including Debian, Alpine 
 
 ## Learning Mode
 
+---
+
+# Execution Modes
+
+LAB-001 supports two execution modes.
+
+The learning objectives are the same in both modes.
+
+The difference is only the infrastructure used to run the laboratory.
+
+
+## Docker Mode
+
+### Purpose
+
+Docker Mode is the recommended option for beginners, classrooms and low-resource environments.
+
+It provides a lightweight and reproducible Linux server environment.
+
+
+Advantages:
+
+- Low hardware requirements.
+- Fast deployment.
+- Easy distribution.
+- Suitable for community education.
+
+
+Limitations:
+
+- The learner interacts with Linux inside a container environment.
+- Some virtualization concepts are abstracted.
+
+
+Example:
+Student Machine
+
+    |
+    |
+ Docker
+
+    |
+    |
+
+Ubuntu Server Container
+
+
+
+---
+
+## Virtual Machine Mode
+
+### Purpose
+
+Virtual Machine Mode provides a more realistic server administration experience.
+
+It is recommended for learners who have enough hardware resources and want to simulate professional environments.
+
+
+Advantages:
+
+- Full operating system experience.
+- More realistic infrastructure management.
+- Allows practicing virtualization concepts.
+- Closer to production environments.
+
+
+Limitations:
+
+- Requires more CPU, RAM and storage.
+- More complex initial setup.
+
+
+Example:
+
+
+Physical Machine
+
+    |
+    |
+
+Hypervisor
+
+    |
+    |
+
+Ubuntu Server VM
+
+
+
+---
+
+## Design Principle
+
+Both modes must provide the same educational experience.
+
+The learner should be able to complete the laboratory regardless of the execution method.
+
+Metis Forge prioritizes accessibility without sacrificing professional learning paths.
+
+
 ### Selected Mode
 
 Build Mode
