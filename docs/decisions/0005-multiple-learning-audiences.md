@@ -8,27 +8,25 @@ Accepted
 
 ## Context
 
-Metis Forge was originally designed as a self-learning platform focused on infrastructure and cybersecurity.
+During the evolution of the project, it became clear that Metis Forge serves multiple educational contexts.
 
-During the project design, a second educational scenario emerged:
+Some learners will study independently.
 
-- Instructor-led classes.
-- Community workshops.
-- Educational activities in underserved communities.
+Others will participate in instructor-led workshops, community programs or classroom environments.
 
-This introduced a new requirement.
+In addition, contributors require technical documentation to maintain and evolve the platform.
 
-The project must support not only students learning independently, but also instructors delivering the laboratories in person.
-
-At the same time, contributors need technical documentation to maintain and evolve the project.
-
-These three audiences have different goals and require different documentation.
+These audiences have different goals, responsibilities and information needs.
 
 ---
 
 ## Decision
 
 Every laboratory in Metis Forge will provide documentation for three distinct audiences.
+
+The existence of multiple audiences should not result in duplicated content.
+
+Each document should be written for a specific audience and avoid repeating information already explained elsewhere.
 
 ### 1. Student Documentation
 
@@ -75,6 +73,7 @@ Spanish (default).
 Purpose:
 
 Help contributors maintain and improve the laboratory.
+Contributors should be able to understand the design decisions without reading the educational material.
 
 Examples:
 
@@ -88,6 +87,11 @@ Language:
 English.
 
 ---
+### 4. Community
+
+Metis Forge also aims to support local communities by providing accessible educational material that can be used in workshops and outreach programs.
+
+Community activities reuse the student and instructor documentation rather than introducing a separate documentation model.
 
 ## Rationale
 
@@ -129,23 +133,24 @@ LAB-XXX/
 
 README.md
 
-teacher/
-├── README.md
-├── lesson-plan.md
-├── instructor-guide.md
-└── teaching-notes.md
-
-docs/
-└── design.md
-
 deployment/
 
+docs/
+    design.md
+
 exercises/
+    README.md
+    ...
 
 evidence/
 
 scripts/
-```
+
+teacher/
+    README.md
+    lesson-plan.md
+    instructor-guide.md
+    teaching-notes.md 
 
 ---
 
@@ -156,5 +161,7 @@ Future versions of Metis Forge may include additional documentation for:
 - Mentors.
 - Translators.
 - Accessibility adaptations.
+
+Future versions may also provide contributor onboarding documentation to help new maintainers understand the project architecture and contribution workflow.
 
 These audiences are outside the current scope.
