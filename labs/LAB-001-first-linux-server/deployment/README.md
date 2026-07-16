@@ -1,39 +1,178 @@
-# Deployment - LAB-001
+# Deployment
 
-## Objetivo
+## Bienvenido
 
-Esta carpeta contiene los archivos necesarios para crear el entorno del laboratorio.
+Antes de administrar un servidor Linux, primero debemos entender dónde está ejecutándose.
 
-## Entorno inicial
+En Metis Forge creemos que la infraestructura también forma parte del aprendizaje.
 
-El laboratorio utilizará un contenedor Linux que representa un servidor recién instalado.
+Por eso este laboratorio no entrega un servidor ya preparado.
 
-## Características iniciales
+Vos mismo vas a construir el entorno sobre el que trabajarás durante todo el laboratorio.
 
-Sistema:
+---
 
-- Ubuntu Server
+# ¿Qué vamos a construir?
 
-Servicios iniciales:
+En este laboratorio construiremos un servidor Linux utilizando Docker.
 
-- SSH
-- Gestión de usuarios
-- Gestión de permisos
-- Logs del sistema
+Este servidor será la base para aprender:
 
+- Administración de sistemas.
+- Usuarios y grupos.
+- Permisos.
+- Acceso remoto mediante SSH.
+- Análisis de logs.
+- Buenas prácticas de administración.
 
-## Filosofía
+El entorno será deliberadamente simple.
 
-El entorno debe comenzar con la mínima configuración posible.
+No incluiremos aplicaciones web, bases de datos ni herramientas de hacking.
 
-El alumno debe realizar la mayor parte de la preparación del sistema.
+Cada nuevo servicio aparecerá únicamente cuando tenga sentido desde el punto de vista educativo.
 
+---
 
-## Futuro
+# ¿Por qué usamos Docker?
 
-Esta carpeta contendrá:
+Docker nos permite crear un entorno completamente reproducible.
 
-- Dockerfile
-- docker-compose.yml
-- Configuraciones iniciales
-- Scripts de creación
+Eso significa que cualquier persona puede construir exactamente el mismo laboratorio siguiendo los mismos pasos.
+
+Esto ofrece varias ventajas:
+
+- Bajo consumo de recursos.
+- Instalación sencilla.
+- Fácil distribución.
+- Resultados consistentes.
+
+Para quienes dispongan de más recursos, este mismo laboratorio también podrá ejecutarse utilizando una Máquina Virtual.
+
+Ambos modos persiguen exactamente los mismos objetivos de aprendizaje.
+
+---
+
+# Contenedor vs Máquina Virtual
+
+Es muy común escuchar que Docker "es una máquina virtual".
+
+Eso no es correcto.
+
+Antes de continuar, intentá comprender la siguiente diferencia.
+
+## Máquina Virtual
+
+```
+Hardware
+    │
+    ▼
+Hipervisor
+    │
+    ▼
+Sistema Operativo Invitado
+    │
+    ▼
+Aplicaciones
+```
+
+Cada máquina virtual ejecuta su propio sistema operativo y su propio kernel.
+
+Esto proporciona un mayor aislamiento, aunque consume más recursos.
+
+---
+
+## Contenedor
+
+```
+Hardware
+    │
+    ▼
+Sistema Operativo Host
+    │
+    ▼
+Docker Engine
+    │
+    ▼
+Contenedor
+    │
+    ▼
+Aplicaciones
+```
+
+Los contenedores comparten el kernel del sistema operativo anfitrión.
+
+No simulan un equipo completo.
+
+Por eso son mucho más livianos y rápidos.
+
+Comprender esta diferencia será uno de los objetivos del primer ejercicio.
+
+---
+
+# ¿Qué contiene esta carpeta?
+
+En esta carpeta encontrarás los archivos necesarios para construir el laboratorio.
+
+## Dockerfile
+
+Describe cómo construir la imagen del laboratorio.
+
+Cada sección estará documentada para explicar no solo qué hace, sino también por qué existe.
+
+---
+
+## docker-compose.yml
+
+Permite crear y ejecutar el laboratorio mediante una única instrucción.
+
+Más adelante incorporaremos nuevos servicios sin modificar la forma de iniciar el entorno.
+
+---
+
+## build.sh
+
+Automatiza la construcción de la imagen.
+
+También sirve para mostrar qué comando de Docker se está ejecutando.
+
+---
+
+## run.sh
+
+Automatiza la ejecución del laboratorio.
+
+Su contenido también estará completamente documentado.
+
+---
+
+# Filosofía
+
+En muchos cursos simplemente se entrega una máquina lista para usar.
+
+En Metis Forge creemos que construir el entorno también forma parte del aprendizaje.
+
+Por esa razón:
+
+- Construís el entorno.
+- Entendés cómo funciona.
+- Lo administrás.
+- Lo asegurás.
+- Lo documentás.
+
+---
+
+# Próximo paso
+
+Una vez que estén disponibles los archivos de esta carpeta, ejecutá:
+
+```bash
+./build.sh
+```
+
+Luego iniciá el laboratorio utilizando:
+
+```bash
+./run.sh
+```
+
+Finalmente podrás comenzar con el **Exercise 00 – Comprendiendo el entorno**.

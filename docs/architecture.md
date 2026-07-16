@@ -2,106 +2,209 @@
 
 ## Overview
 
-Metis Forge is an open-source infrastructure learning platform designed to teach how modern systems are built, secured and operated.
+This document describes the architectural organization of the Metis Forge project.
 
-The platform combines infrastructure deployment, system administration and cybersecurity practices into realistic hands-on learning environments.
+Rather than describing technologies, it explains how the repository is structured and how each component contributes to the educational platform.
 
-The objective is not only to exploit vulnerabilities, but to understand the complete lifecycle of a system:
+---
 
-- Design
-- Deployment
-- Operation
-- Security
-- Improvement
+# Repository Structure
 
+```
+metisForge/
+│
+├── docs/
+├── labs/
+├── README.md
+└── ROADMAP.md
+```
 
-## Goals
+The repository is divided into two major areas:
 
-Metis Forge aims to:
+- Project documentation
+- Practical laboratories
 
-- Teach real-world infrastructure concepts.
-- Provide practical environments for learning.
-- Combine system administration and cybersecurity.
-- Run on accessible hardware.
-- Promote documentation and understanding.
+---
 
+# Documentation Layer
 
-## Non Goals
+```
+docs/
+```
 
-Metis Forge is not intended to be:
+Contains documentation about the project itself.
 
-- Only a penetration testing platform.
-- A collection of vulnerable machines without context.
-- A replacement for professional certifications.
-- A simple copy of existing cybersecurity labs.
+Current documents include:
 
+- Architecture
+- Philosophy
+- Architectural Decision Records (ADRs)
+- Roadmap
 
-## Core Concept
+This documentation explains why the project exists and how it evolves.
 
-Each learning environment represents a complete system lifecycle.
+---
 
-Users should be able to:
+# Laboratory Layer
 
-1. Build the environment.
-2. Understand its components.
-3. Configure services.
-4. Apply security controls.
-5. Identify weaknesses.
-6. Improve the system.
+```
+labs/
+```
 
+Contains every practical laboratory.
 
-## Learning Lab Model
+Each laboratory is self-contained and can be completed independently while building upon previous knowledge.
 
-Each laboratory should contain:
+Every laboratory follows a common structure.
 
-- Infrastructure definition.
-- Deployment instructions.
-- Technical documentation.
-- Security considerations.
-- Challenges or exercises.
-- Troubleshooting guides.
+```
+LAB-XXX/
+│
+├── deployment/
+├── exercises/
+├── evidence/
+├── scripts/
+├── teacher/
+├── docs/
+└── README.md
+```
 
+---
 
-## Infrastructure Model
+# Laboratory Components
 
-Metis Forge will prioritize:
+## README
 
-- Open-source technologies.
-- Container-based environments.
-- Reproducible deployments.
-- Minimal hardware requirements.
+Introduces the laboratory.
 
+Explains objectives, prerequisites and recommended learning path.
 
-## Security Model
+---
 
-Security is integrated from the beginning.
+## deployment/
 
-Each component should consider:
+Contains everything required to build the laboratory environment.
 
-- Configuration security.
-- Authentication.
-- Authorization.
-- Network exposure.
-- Logging.
-- Monitoring.
+Examples:
 
+- Dockerfile
+- Docker Compose
+- Build scripts
+- VM instructions
 
-## Documentation Model
+---
 
-Documentation is considered part of the infrastructure.
+## exercises/
 
-Every component should explain:
+Contains the practical activities performed by the student.
 
-- What it is.
-- Why it exists.
-- How it works.
-- How to deploy it.
-- How to secure it.
-- How to troubleshoot it.
+Exercises should gradually increase in complexity.
 
+---
 
-## Future Evolution
+## evidence/
 
-Metis Forge should evolve gradually:
+Contains templates and recommendations for documenting completed work.
 
-Foundation → Infrastructure → Operations → Security → Advanced Systems
+Students are encouraged to record:
+
+- Commands
+- Screenshots
+- Explanations
+- Lessons learned
+
+---
+
+## scripts/
+
+Utility scripts used to automate repetitive tasks.
+
+Scripts should never replace understanding.
+
+Automation supports learning but does not replace it.
+
+---
+
+## teacher/
+
+Material intended for instructors.
+
+Examples:
+
+- Lesson plans
+- Teaching notes
+- Instructor guides
+
+This separation allows the same laboratory to be used for both self-learning and classroom instruction.
+
+---
+
+## docs/
+
+Additional documentation specific to the laboratory.
+
+Examples:
+
+- Design documents
+- Architecture diagrams
+- Technical references
+
+---
+
+# Learning Architecture
+
+Every laboratory follows the same educational lifecycle.
+
+```
+Understand
+      ↓
+Design
+      ↓
+Deployment
+      ↓
+Operation
+      ↓
+Security Analysis
+      ↓
+Hardening
+      ↓
+Documentation
+```
+
+This lifecycle is independent of the technology being used.
+
+---
+
+# Design Principles
+
+Every laboratory should be:
+
+- Reproducible
+- Modular
+- Documented
+- Incremental
+- Accessible
+
+---
+
+# Execution Modes
+
+Whenever possible, laboratories should support multiple execution modes.
+
+Quick Mode
+
+- Docker
+
+Professional Mode
+
+- Virtual Machine
+
+Both modes should provide equivalent learning objectives.
+
+---
+
+# Evolution
+
+New laboratories should extend the platform without changing its architectural principles.
+
+Consistency is preferred over complexity.
