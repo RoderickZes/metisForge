@@ -96,8 +96,8 @@ LAB-XXX-name/
 ├── deployment/
 ├── exercises/
 ├── evidence/
-└── scripts/
-
+├── scripts/
+└── teacher/
 
 
 ## Component Definition
@@ -109,11 +109,12 @@ Entry point for the laboratory.
 
 Contains:
 
-- Overview.
-- Learning objectives.
-- Scenario description.
-- Requirements.
-- Quick start information.
+- Overview
+- Learning objectives
+- Scenario description
+- Requirements
+- Recommended learning path
+- Links to the deployment guide and exercises
 
 
 ### docs/
@@ -130,13 +131,16 @@ Examples:
 
 ### deployment/
 
-Contains files required to create the environment.
+Purpose:
+
+Guide the learner through understanding the execution environment before deploying it.
 
 Examples:
 
-- Docker Compose files.
-- Dockerfiles.
-- Configuration files.
+- Dockerfile
+- Docker Compose
+- Build scripts
+- Environment documentation
 
 
 ### exercises/
@@ -146,6 +150,12 @@ Contains practical activities.
 Exercises should encourage understanding, experimentation and troubleshooting.
 
 They should not only provide commands to copy and execute.
+
+Exercises are sequential.
+
+Each exercise builds upon the previous one.
+
+Learners should understand the current stage before moving to the next.
 
 
 ### evidence/
@@ -174,23 +184,55 @@ Examples:
 - Validation scripts.
 - Cleanup scripts.
 
+### teacher/
+
+Support material for instructors conducting the laboratory.
+
+Examples:
+
+Lesson plans.
+Instructor guides.
+Teaching notes.
+Classroom recommendations.
+Common student difficulties.
+
+Purpose:
+
+Provide educational support without exposing instructor material to learners during self-paced study.
 
 ## Learning Philosophy
 
 A Metis Forge laboratory follows this cycle:
 
 Understand
-|
+
+↓
+
+Prepare
+
+↓
+
 Deploy
-|
+
+↓
+
 Operate
-|
+
+↓
+
 Analyze
-|
+
+↓
+
 Secure
-|
+
+↓
+
 Document
 
+↓
+
+Reflect
 
 
 The final objective is not only solving a challenge, but understanding the complete lifecycle of a system.
@@ -213,7 +255,27 @@ Negative:
 - Requires more work when creating laboratories.
 - Some simple exercises may not need every component.
 
+### Learning Audiences
+
+Each laboratory should support three complementary audiences:
+
+Learners
+Follow the laboratory independently.
+
+Instructors
+Use teaching material to guide students in classroom environments.
+
+Contributors
+Understand the laboratory implementation and evolve the project.
 
 ## Future Considerations
 
-Metis Forge may implement automated validation to verify that laboratories follow the defined structure.
+Metis Forge may provide tooling to:
+
+Validate laboratory structure.
+Check required documentation.
+Automate environment creation.
+Verify learning outcomes.
+Generate portfolio-ready evidence.
+
+
