@@ -1,4 +1,13 @@
-# Deployment
+# # Deployment - Construyendo el entorno del laboratorio
+
+
+## Antes de continuar
+
+Todavía no vas a administrar Linux.
+
+Primero vas a construir el entorno donde ese servidor existirá.
+
+En Metis Forge creemos que comprender la infraestructura es tan importante como aprender a utilizarla.
 
 ## Bienvenido
 
@@ -14,7 +23,11 @@ Vos mismo vas a construir el entorno sobre el que trabajarás durante todo el la
 
 # ¿Qué vamos a construir?
 
-En este laboratorio construiremos un servidor Linux utilizando Docker.
+En este laboratorio construiremos un entorno reproducible que contendrá un servidor Linux.
+
+El objetivo no es aprender Docker en profundidad.
+
+Docker es la herramienta que utilizaremos para aprender infraestructura Linux.
 
 Este servidor será la base para aprender:
 
@@ -36,6 +49,8 @@ Cada nuevo servicio aparecerá únicamente cuando tenga sentido desde el punto d
 # ¿Por qué usamos Docker?
 
 Docker nos permite crear un entorno completamente reproducible.
+
+
 
 Eso significa que cualquier persona puede construir exactamente el mismo laboratorio siguiendo los mismos pasos.
 
@@ -79,6 +94,12 @@ Cada máquina virtual ejecuta su propio sistema operativo y su propio kernel.
 
 Esto proporciona un mayor aislamiento, aunque consume más recursos.
 
+No existe una opción "mejor".
+
+Cada tecnología resuelve problemas diferentes.
+
+A lo largo de tu carrera profesional probablemente utilices ambas.
+
 ---
 
 ## Contenedor
@@ -98,6 +119,16 @@ Contenedor
     ▼
 Aplicaciones
 ```
+
+Muchos principiantes creen que un contenedor es "una computadora pequeña".
+
+No lo es.
+
+Durante este laboratorio vas a administrar procesos que se ejecutan dentro de un contenedor Linux.
+
+Eso significa que aprenderás conceptos reales de administración de sistemas, aunque el entorno sea más liviano que una máquina virtual completa.
+
+Comprender esta diferencia será el objetivo del primer ejercicio.
 
 Los contenedores comparten el kernel del sistema operativo anfitrión.
 
@@ -147,32 +178,32 @@ Su contenido también estará completamente documentado.
 
 # Filosofía
 
-En muchos cursos simplemente se entrega una máquina lista para usar.
+En Metis Forge el proceso de construcción forma parte del laboratorio.
 
-En Metis Forge creemos que construir el entorno también forma parte del aprendizaje.
+El entorno donde trabajarás no es un detalle técnico: es el primer componente que aprenderás a comprender y administrar.
 
 Por esa razón:
 
-- Construís el entorno.
-- Entendés cómo funciona.
-- Lo administrás.
-- Lo asegurás.
-- Lo documentás.
+Construir
+↓
+
+Comprender
+↓
+
+Administrar
+↓
+
+Asegurar
+↓
+
+Documentar
 
 ---
 
 # Próximo paso
 
-Una vez que estén disponibles los archivos de esta carpeta, ejecutá:
+Los scripts y archivos de esta carpeta serán creados a lo largo del laboratorio.
 
-```bash
-./build.sh
-```
-
-Luego iniciá el laboratorio utilizando:
-
-```bash
-./run.sh
-```
+Una vez disponibles, volverás aquí para construir el entorno con un único comando.
 
 Finalmente podrás comenzar con el **Exercise 00 – Comprendiendo el entorno**.
