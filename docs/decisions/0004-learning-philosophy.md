@@ -4,6 +4,15 @@
 
 Accepted
 
+## Principles
+
+Learning should prioritize understanding over memorization.
+
+Commands are tools.
+
+Concepts are transferable.
+
+The objective is not remembering syntax, but understanding why systems behave the way they do.
 
 ## Context
 
@@ -94,18 +103,24 @@ Metis Forge will follow a lifecycle-based learning approach.
 Laboratories should guide learners through:
 
 Understand
-|
+     │
+Prepare
+     │
 Design
-|
+     │
 Deploy
-|
+     │
 Operate
-|
-Analyze Security
-|
-Harden
-|
+     │
+Observe
+     │
+Analyze
+     │
+Secure
+     │
 Document
+     │
+Reflect
 
 
 Security is not treated as an isolated final step.
@@ -115,7 +130,9 @@ Security is a continuous process integrated throughout the system lifecycle.
 
 ## Evidence-Based Learning
 
-Completing a laboratory should generate evidence of understanding.
+Every laboratory should generate portfolio-quality evidence.
+
+Evidence should demonstrate not only that a task was completed, but that the learner understands the reasoning behind the implementation.
 
 Examples:
 
@@ -145,6 +162,25 @@ Negative:
 - Laboratories require more design effort.
 - Progression may feel slower compared to simple challenges.
 
+## Learning Through Failure
+
+Mistakes are expected.
+
+Laboratories should encourage experimentation.
+
+Learners are expected to break systems, investigate failures and recover from them.
+
+Troubleshooting is considered part of the learning process.
+
+
+## Classroom Support
+
+Laboratories should support both:
+
+- Independent learning.
+- Instructor-guided classes.
+
+The same laboratory should be useful in self-paced and classroom environments.
 
 ## Future Considerations
 
@@ -153,5 +189,15 @@ Metis Forge may include challenge elements such as:
 - Security exercises.
 - Vulnerability discovery.
 - Capture the Flag activities.
+- Realistic operational incidents.
+- Maintenance tasks.
+- Infrastructure failures.
+- Service migrations.
+- Disaster recovery.
+- Production-like scenarios.
 
 However, challenges should exist inside realistic environments rather than replacing them.
+
+The objective is not to create people capable of following tutorials.
+
+The objective is to create professionals capable of understanding systems they have never seen before.
