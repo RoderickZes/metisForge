@@ -119,21 +119,33 @@ The objective is to remove unnecessary barriers while preparing learners for pro
 
 ## Documentation Categories
 
-Metis Forge separates documentation into two categories:
-
-### Educational Documentation
+## Educational Documentation
 
 Audience:
 Learners
 
 Language:
-Spanish first
+Spanish
 
 Purpose:
-Teaching concepts and practices.
+Teach infrastructure and cybersecurity concepts.
 
+---
 
-### Engineering Documentation
+## Instructor Documentation
+
+Audience:
+Teachers and instructors
+
+Language:
+Spanish
+
+Purpose:
+Support classroom teaching, lesson planning and educational guidance.
+
+---
+
+## Engineering Documentation
 
 Audience:
 Developers and contributors
@@ -142,4 +154,8 @@ Language:
 English
 
 Purpose:
-Document architecture, decisions and implementation details.
+Describe architecture, implementation decisions and project evolution.
+
+Language should never become a barrier to learning.
+
+Professional terminology should be introduced progressively while keeping educational content accessible.
