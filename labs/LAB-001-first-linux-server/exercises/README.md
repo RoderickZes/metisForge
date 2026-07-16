@@ -1,4 +1,4 @@
-# Ejercicios - LAB-001
+# # Ejercicios - Cómo trabajar este laboratorio
 
 ## Introducción
 
@@ -9,6 +9,12 @@ Cada uno representa una etapa del proceso de aprendizaje y fue diseñado para de
 No se espera que completes un ejercicio rápidamente.
 
 Se espera que entiendas qué estás haciendo y por qué.
+
+Los ejercicios fueron diseñados para realizarse de manera secuencial.
+
+Cada uno introduce conceptos que serán necesarios para comprender el siguiente.
+
+Aunque técnicamente podrías leer cualquier ejercicio por separado, se recomienda seguir el orden propuesto.
 
 ---
 
@@ -49,11 +55,26 @@ Los ejercicios deben realizarse en el siguiente orden:
 
 Cada ejercicio utiliza conocimientos adquiridos en los anteriores.
 
+
+# Antes de pedir ayuda
+
+Si encontrás un problema:
+
+1. Leé cuidadosamente el mensaje de error.
+2. Revisá la documentación del ejercicio.
+3. Investigá posibles soluciones.
+4. Probá una alternativa.
+5. Documentá lo que descubriste.
+
+Aprender a investigar es una de las habilidades más importantes de un profesional de infraestructura.
+
 ---
 
 # Evidencia
 
-Durante cada ejercicio registra:
+Durante cada ejercicio construí tu propia evidencia de aprendizaje.
+
+Siempre que sea posible registra:
 
 - Comandos utilizados.
 - Capturas de pantalla cuando corresponda.
@@ -62,6 +83,10 @@ Durante cada ejercicio registra:
 - Explicaciones con tus propias palabras.
 
 Al finalizar el laboratorio deberías ser capaz de explicar cada decisión que tomaste.
+
+La evidencia no es un requisito administrativo.
+
+Es una herramienta para demostrar lo que aprendiste y construir un portafolio técnico que puedas revisar o compartir en el futuro.
 
 ---
 
@@ -73,7 +98,9 @@ Buscamos que desarrolles criterio técnico.
 
 Si en algún momento no entendés por qué ejecutaste un comando, ese es un buen momento para detenerte, investigar y hacer preguntas.
 
-Comprender siempre tiene prioridad sobre avanzar.
+Avanzar sin comprender genera conocimiento frágil.
+
+Comprender, experimentar y documentar siempre tiene prioridad sobre completar rápidamente un ejercicio.
 
 ---
 
@@ -81,6 +108,6 @@ Comprender siempre tiene prioridad sobre avanzar.
 
 Comenzá con el ejercicio:
 
-**00 - Understanding Your Environment**
+**00 - Entendiendo tu entorno de trabajo**
 
 Antes de administrar un servidor, es importante comprender qué es realmente el entorno sobre el que vas a trabajar.
