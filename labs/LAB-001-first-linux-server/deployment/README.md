@@ -1,209 +1,372 @@
-# # Deployment - Construyendo el entorno del laboratorio
-
+# Preparación del entorno del laboratorio
 
 ## Antes de continuar
 
 Todavía no vas a administrar Linux.
 
-Primero vas a construir el entorno donde ese servidor existirá.
+Primero vas a preparar la computadora desde la que realizarás el laboratorio.
 
-En Metis Forge creemos que comprender la infraestructura es tan importante como aprender a utilizarla.
+Esta etapa también forma parte del aprendizaje.
 
-## Bienvenido
+Vas a aprender a:
 
-Antes de administrar un servidor Linux, primero debemos entender dónde está ejecutándose.
+- Reconocer el sistema operativo que estás utilizando.
+- Abrir una terminal.
+- Leer y ejecutar comandos.
+- Instalar las herramientas necesarias.
+- Verificar que la instalación funcione.
+- Construir e iniciar el entorno del laboratorio.
+- Distinguir entre tu computadora y el servidor Linux del laboratorio.
 
-En Metis Forge creemos que la infraestructura también forma parte del aprendizaje.
+No necesitás haber utilizado una terminal anteriormente.
 
-Por eso este laboratorio no entrega un servidor ya preparado.
-
-Vos mismo vas a construir el entorno sobre el que trabajarás durante todo el laboratorio.
+Las instrucciones estarán explicadas paso a paso.
 
 ---
 
 # ¿Qué vamos a construir?
 
-En este laboratorio construiremos un entorno reproducible que contendrá un servidor Linux.
+Durante esta etapa vas a preparar un entorno Linux aislado utilizando Docker.
 
-El objetivo no es aprender Docker en profundidad.
+El recorrido será similar a este:
 
-Docker es la herramienta que utilizaremos para aprender infraestructura Linux.
+```text
+Tu computadora
+      │
+      ▼
+Sistema operativo
+Windows, macOS o Linux
+      │
+      ▼
+Docker
+      │
+      ▼
+Contenedor del laboratorio
+      │
+      ▼
+Servidor Linux de Metis Forge
+```
 
-Este servidor será la base para aprender:
+El contenedor será el servidor Linux que utilizarás durante los ejercicios.
 
-- Administración de sistemas.
+Dentro de ese entorno aprenderás sobre:
+
+- El sistema de archivos de Linux.
+- La terminal.
 - Usuarios y grupos.
 - Permisos.
+- Procesos y servicios.
 - Acceso remoto mediante SSH.
-- Análisis de logs.
-- Buenas prácticas de administración.
-
-El entorno será deliberadamente simple.
-
-No incluiremos aplicaciones web, bases de datos ni herramientas de hacking.
-
-Cada nuevo servicio aparecerá únicamente cuando tenga sentido desde el punto de vista educativo.
+- Registros del sistema.
+- Administración segura.
 
 ---
 
-# ¿Por qué usamos Docker?
+# Importante: existen dos terminales diferentes
 
-Docker nos permite crear un entorno completamente reproducible.
+Durante la preparación vas a trabajar en dos entornos.
 
+Es importante aprender a reconocerlos.
 
+## Terminal de tu computadora
 
-Eso significa que cualquier persona puede construir exactamente el mismo laboratorio siguiendo los mismos pasos.
+Es la terminal del sistema operativo que estás utilizando.
 
-Esto ofrece varias ventajas:
+En Windows utilizaremos principalmente PowerShell.
 
-- Bajo consumo de recursos.
-- Instalación sencilla.
-- Fácil distribución.
-- Resultados consistentes.
+Su prompt puede verse así:
 
-Para quienes dispongan de más recursos, este mismo laboratorio también podrá ejecutarse utilizando una Máquina Virtual.
-
-Ambos modos persiguen exactamente los mismos objetivos de aprendizaje.
-
----
-
-# Contenedor vs Máquina Virtual
-
-Es muy común escuchar que Docker "es una máquina virtual".
-
-Eso no es correcto.
-
-Antes de continuar, intentá comprender la siguiente diferencia.
-
-## Máquina Virtual
-
-```
-Hardware
-    │
-    ▼
-Hipervisor
-    │
-    ▼
-Sistema Operativo Invitado
-    │
-    ▼
-Aplicaciones
+```text
+PS C:\Users\Alumno>
 ```
 
-Cada máquina virtual ejecuta su propio sistema operativo y su propio kernel.
-
-Esto proporciona un mayor aislamiento, aunque consume más recursos.
-
-No existe una opción "mejor".
-
-Cada tecnología resuelve problemas diferentes.
-
-A lo largo de tu carrera profesional probablemente utilices ambas.
+Los comandos de instalación y preparación se ejecutarán aquí.
 
 ---
 
-## Contenedor
+## Terminal del laboratorio
 
-```
-Hardware
-    │
-    ▼
-Sistema Operativo Host
-    │
-    ▼
-Docker Engine
-    │
-    ▼
-Contenedor
-    │
-    ▼
-Aplicaciones
+Después de iniciar el contenedor, vas a entrar en un entorno Linux.
+
+Su prompt podrá verse de una forma similar a esta:
+
+```text
+alumno@metis-lab:~$
 ```
 
-Muchos principiantes creen que un contenedor es "una computadora pequeña".
+Los comandos de administración de Linux se ejecutarán aquí.
 
-No lo es.
+A lo largo de las guías se indicará claramente dónde debe ejecutarse cada comando.
 
-Durante este laboratorio vas a administrar procesos que se ejecutan dentro de un contenedor Linux.
-
-Eso significa que aprenderás conceptos reales de administración de sistemas, aunque el entorno sea más liviano que una máquina virtual completa.
-
-Comprender esta diferencia será el objetivo del primer ejercicio.
-
-Los contenedores comparten el kernel del sistema operativo anfitrión.
-
-No simulan un equipo completo.
-
-Por eso son mucho más livianos y rápidos.
-
-Comprender esta diferencia será uno de los objetivos del primer ejercicio.
+No ejecutes un comando si no sabés en cuál de los dos entornos te encontrás.
 
 ---
 
-# ¿Qué contiene esta carpeta?
+# Elegí tu sistema operativo
 
-En esta carpeta encontrarás los archivos necesarios para construir el laboratorio.
+Las instrucciones dependen del sistema operativo instalado en tu computadora.
 
-## Dockerfile
+## Windows
 
-Describe cómo construir la imagen del laboratorio.
+Este es el recorrido principal de Metis Forge.
 
-Cada sección estará documentada para explicar no solo qué hace, sino también por qué existe.
+Vas a aprender a:
 
----
+- Identificar tu versión de Windows.
+- Abrir PowerShell.
+- Leer y ejecutar comandos básicos.
+- Preparar las funciones necesarias del sistema.
+- Instalar Docker.
+- Verificar que Docker esté funcionando.
 
-## docker-compose.yml
+Continuá en:
 
-Permite crear y ejecutar el laboratorio mediante una única instrucción.
-
-Más adelante incorporaremos nuevos servicios sin modificar la forma de iniciar el entorno.
-
----
-
-## build.sh
-
-Automatiza la construcción de la imagen.
-
-También sirve para mostrar qué comando de Docker se está ejecutando.
+[Preparación del entorno en Windows](windows.md)
 
 ---
 
-## run.sh
+## macOS
 
-Automatiza la ejecución del laboratorio.
+Vas a utilizar la aplicación Terminal y preparar Docker para macOS.
 
-Su contenido también estará completamente documentado.
+Continuá en:
+
+[Preparación del entorno en macOS](macos.md)
 
 ---
 
-# Filosofía
+## Linux
 
-En Metis Forge el proceso de construcción forma parte del laboratorio.
+Vas a utilizar la terminal de tu distribución e instalar Docker utilizando el método correspondiente.
 
-El entorno donde trabajarás no es un detalle técnico: es el primer componente que aprenderás a comprender y administrar.
+Continuá en:
 
-Por esa razón:
+[Preparación del entorno en Linux](linux.md)
 
-Construir
-↓
+---
 
-Comprender
-↓
+# ¿No sabés qué sistema operativo tenés?
 
-Administrar
-↓
+Observá la computadora al iniciar.
 
-Asegurar
-↓
+Algunas señales frecuentes son:
 
-Documentar
+- Si aparece el logotipo de Windows y utilizás el menú Inicio, probablemente estés usando Windows.
+- Si utilizás una computadora Apple y aparece el menú de macOS, estás usando macOS.
+- Si aparecen nombres como Ubuntu, Debian, Fedora, Mint o Arch, probablemente estés utilizando una distribución Linux.
+
+Si estás realizando el laboratorio con un docente, pedile ayuda antes de continuar.
+
+No instales herramientas hasta haber identificado correctamente tu sistema operativo.
+
+---
+
+# Requisitos generales
+
+Para preparar el laboratorio normalmente necesitarás:
+
+- Acceso a una computadora.
+- Permiso para instalar programas.
+- Conexión a Internet durante la preparación.
+- Espacio disponible en el almacenamiento.
+- Posibilidad de reiniciar el equipo.
+- Acceso a una cuenta con permisos administrativos cuando el sistema lo solicite.
+
+No todas las computadoras podrán ejecutar el laboratorio de la misma manera.
+
+Si el equipo no cumple los requisitos, todavía podés:
+
+- Participar mediante una computadora compartida.
+- Seguir las demostraciones del docente.
+- Realizar los ejercicios conceptuales.
+- Registrar las respuestas y observaciones.
+- Repetir la práctica cuando tengas acceso a otro equipo.
+
+No disponer de una computadora compatible no impide comenzar a aprender.
+
+---
+
+# Sobre los permisos administrativos
+
+Durante la instalación, el sistema operativo puede solicitar permisos especiales.
+
+En Windows puede aparecer una ventana preguntando si permitís que una aplicación realice cambios en el dispositivo.
+
+En macOS o Linux puede solicitarse la contraseña de un usuario administrador.
+
+Estos permisos permiten instalar o modificar componentes del sistema.
+
+Antes de aceptarlos, verificá siempre:
+
+- Qué programa estás instalando.
+- De dónde lo descargaste.
+- Qué instrucción del laboratorio estás siguiendo.
+- Si la fuente utilizada es oficial.
+
+Nunca ingreses una contraseña dentro de una página o ventana que no reconozcas.
+
+---
+
+# No copies comandos sin comprenderlos
+
+Durante esta etapa encontrarás bloques similares al siguiente:
+
+```powershell
+docker --version
+```
+
+Debés escribir únicamente el comando que aparece dentro del bloque.
+
+No copies el texto del prompt.
+
+Por ejemplo, si ves:
+
+```text
+PS C:\Users\Alumno> docker --version
+```
+
+el comando es solamente:
+
+```powershell
+docker --version
+```
+
+Después de escribirlo, presioná `Enter`.
+
+La terminal mostrará el resultado debajo.
+
+Antes de ejecutar cualquier comando, intentá responder:
+
+- ¿En qué terminal debo ejecutarlo?
+- ¿Qué intenta hacer?
+- ¿Necesita permisos administrativos?
+- ¿Cómo puedo verificar el resultado?
+
+---
+
+# Cómo trabajar con errores
+
+Es normal encontrar errores durante una instalación.
+
+Un error no significa necesariamente que hayas dañado el equipo.
+
+Cuando aparezca uno:
+
+1. Detenete.
+2. Leé el mensaje completo.
+3. Identificá qué comando ejecutaste.
+4. Revisá si estabas en la terminal correcta.
+5. Compará el resultado con la guía.
+6. Registrá el mensaje antes de cerrar la ventana.
+7. Buscá el significado en documentación confiable.
+8. Pedí ayuda si no comprendés el problema.
+
+No ejecutes comandos adicionales al azar para intentar solucionarlo.
+
+Un buen diagnóstico comienza observando lo que ocurrió.
+
+---
+
+# Después de instalar Docker
+
+Cuando hayas completado la guía correspondiente a tu sistema operativo, vas a verificar la instalación.
+
+Las comprobaciones incluirán comandos similares a:
+
+```text
+docker --version
+```
+
+```text
+docker compose version
+```
+
+También realizarás una prueba controlada para confirmar que Docker puede crear y ejecutar contenedores.
+
+La guía de tu sistema operativo explicará:
+
+- Dónde ejecutar cada comando.
+- Qué resultado esperar.
+- Qué significa el resultado.
+- Qué hacer si aparece un error.
+
+---
+
+# Iniciar el laboratorio
+
+Cuando Docker esté instalado y funcionando, continuarás con:
+
+[Iniciar y detener el laboratorio](iniciar-y-detener-el-laboratorio.md)
+
+En esa guía vas a aprender a:
+
+- Obtener los archivos de Metis Forge.
+- Ubicarte en la carpeta correcta.
+- Construir el entorno.
+- Iniciar el laboratorio.
+- Comprobar su estado.
+- Entrar al contenedor Linux.
+- Reconocer el cambio de terminal.
+- Salir del contenedor.
+- Detener y volver a iniciar el laboratorio.
+
+---
+
+# ¿Por qué utilizamos Docker?
+
+Docker nos permite construir un entorno de laboratorio reproducible.
+
+Esto significa que distintas personas pueden trabajar con una configuración similar, aunque utilicen computadoras diferentes.
+
+También permite:
+
+- Reiniciar el entorno cuando sea necesario.
+- Reducir el consumo de recursos.
+- Distribuir el laboratorio con facilidad.
+- Evitar cambios permanentes innecesarios en la computadora del alumno.
+
+Docker es una herramienta para construir el entorno.
+
+El objetivo principal del laboratorio sigue siendo aprender Linux, infraestructura y seguridad.
+
+La diferencia entre un contenedor y una máquina virtual será estudiada en los ejercicios conceptuales.
+
+---
+
+# Recorrido de preparación
+
+El proceso completo será:
+
+```text
+Identificar el sistema operativo
+              ↓
+Aprender a usar su terminal
+              ↓
+Preparar los requisitos
+              ↓
+Instalar Docker
+              ↓
+Verificar la instalación
+              ↓
+Obtener Metis Forge
+              ↓
+Construir el laboratorio
+              ↓
+Iniciar el contenedor
+              ↓
+Entrar al entorno Linux
+              ↓
+Comenzar los ejercicios prácticos
+```
 
 ---
 
 # Próximo paso
 
-Los scripts y archivos de esta carpeta serán creados a lo largo del laboratorio.
+Elegí la guía correspondiente al sistema operativo de tu computadora:
 
-Una vez disponibles, volverás aquí para construir el entorno con un único comando.
+- [Windows](windows.md)
+- [macOS](macos.md)
+- [Linux](linux.md)
 
-Finalmente podrás comenzar con el **Exercise 00 – Comprendiendo el entorno**.
+Si estás utilizando una computadora compartida, seguí las indicaciones del docente antes de instalar o modificar cualquier componente.
