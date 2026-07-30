@@ -1,0 +1,15 @@
+# Metis Forge - LAB-001 - First Linux Server
+# Quick Mode (Docker)
+
+services:
+  metis-lab:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: metis-lab
+    hostname: metis-lab
+    init: true
+    ports:
+      - "2222:22"
+    stdin_open: true
+    tty: true
