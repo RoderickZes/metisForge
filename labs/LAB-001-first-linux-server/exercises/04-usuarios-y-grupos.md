@@ -1,4 +1,4 @@
-# Ejercicio 02 - Usuarios y grupos
+# Ejercicio 04 - Usuarios y grupos
 
 ---
 

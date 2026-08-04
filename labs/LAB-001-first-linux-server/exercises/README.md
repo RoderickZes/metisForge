@@ -1,4 +1,4 @@
-# # Ejercicios - Cómo trabajar este laboratorio
+# Ejercicios - Cómo trabajar este laboratorio
 
 ## Introducción
 
@@ -41,17 +41,21 @@ El objetivo es construir conocimiento sólido.
 
 Los ejercicios deben realizarse en el siguiente orden:
 
-00 — Entendiendo el entorno de trabajo
+00 — Fundamentos de la computadora
 
-01 — Explorando Linux
+01 — Entendiendo el entorno de trabajo
 
-02 — Usuarios y grupos
+02 — Primer contacto con la terminal *(pendiente de redacción)*
 
-03 — Permisos
+03 — Explorando Linux
 
-04 — Administración remota mediante SSH
+04 — Usuarios y grupos
 
-05 — Logs y observabilidad
+05 — Permisos
+
+06 — Administración remota mediante SSH
+
+07 — Logs y observabilidad
 
 Cada ejercicio utiliza conocimientos adquiridos en los anteriores.
 
@@ -108,6 +112,6 @@ Comprender, experimentar y documentar siempre tiene prioridad sobre completar r�
 
 Comenzá con el ejercicio:
 
-**00 - Entendiendo tu entorno de trabajo**
+***00 - Fundamentos de la computadora**
 
-Antes de administrar un servidor, es importante comprender qué es realmente el entorno sobre el que vas a trabajar.
+Antes de administrar un servidor, es importante comprender qué es, en primer lugar, una computadora.

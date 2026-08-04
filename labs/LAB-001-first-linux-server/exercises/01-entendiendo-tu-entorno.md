@@ -1,4 +1,4 @@
-# Ejercicio 00 - Entendiendo tu entorno
+# Ejercicio 01 - Entendiendo tu entorno
 
 ---
 

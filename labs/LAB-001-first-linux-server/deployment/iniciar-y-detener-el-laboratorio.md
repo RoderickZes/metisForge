@@ -163,7 +163,6 @@ Y si sospechás que la imagen quedó en un estado raro y querés forzar una reco
 
 docker compose build --no-cache
 
-Este último comando lo usamos varias veces mientras probábamos este mismo entorno.
 
 ---
 
@@ -224,5 +223,5 @@ Con el laboratorio corriendo y sabiendo cómo entrar, salir y detenerlo, ya pod�
 
 Continuá con:
 
-`../exercises/00-entendiendo-tu-entorno.md`
+`../exercises/01-entendiendo-tu-entorno.md`
 

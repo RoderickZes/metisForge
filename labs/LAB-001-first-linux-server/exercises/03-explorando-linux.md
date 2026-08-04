@@ -1,4 +1,4 @@
-# Ejercicio 01 - Explorando Linux
+# Ejercicio 03 - Explorando Linux
 
 ---
 
