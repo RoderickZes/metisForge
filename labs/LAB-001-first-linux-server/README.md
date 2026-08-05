@@ -44,11 +44,14 @@ Al finalizar este laboratorio deberías ser capaz de:
 
 # Requisitos
 
-Obligatorios:
+No hace falta ningún conocimiento técnico previo. Este laboratorio está pensado para empezar desde cero: no necesitás saber qué es una terminal, ni haber usado Linux, Docker o Git antes de este momento. Todo eso se explica y se instala como parte del recorrido, empezando por `deployment/README.md`.
 
-- Docker
-- Terminal
-- Git
+Lo único que necesitás:
+
+- Una computadora (Windows, macOS o Linux) capaz de correr Docker. La guía de tu sistema operativo, dentro de `deployment/`, te ayuda a comprobarlo — y también contempla alternativas si tu equipo es más limitado.
+- Conexión a Internet, al menos para la instalación inicial.
+
+Si tu computadora no cumple estos requisitos, todavía podés participar: consultá con tu docente, o revisá las alternativas que menciona la guía de tu sistema operativo.
 
 Recomendados:
 
@@ -71,11 +74,11 @@ teacher/
 
 # Orden recomendado
 
-1. Leer `deployment/README.md`
-2. Construir el entorno
-3. Ejecutar el Ejercicio 00
-4. Continuar con los ejercicios
-5. Guardar evidencias
+1. Leer `deployment/README.md` y elegir la guía de tu sistema operativo.
+2. Completar esa guía — incluye el Ejercicio 00 (Fundamentos de la computadora) casi al comienzo, y termina con Docker instalado y funcionando.
+3. Seguir `deployment/iniciar-y-detener-el-laboratorio.md` para construir e iniciar el laboratorio por primera vez.
+4. Continuar con los ejercicios, en el orden de `exercises/README.md`.
+5. Guardar evidencias a medida que avanzás.
 
 ---
 
