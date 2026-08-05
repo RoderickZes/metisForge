@@ -152,3 +152,15 @@ Current development includes:
 - LAB-001 — First Linux Server
 
 Metis Forge is under active development.
+
+
+## Licensing
+
+Metis Forge uses different copyleft licenses depending on the type of content:
+
+* **Code, scripts, and executable infrastructure:** [GNU Affero General Public License v3.0 or later](LICENSE) (`AGPL-3.0-or-later`).
+* **Documentation, laboratories, and instructor materials:** [Creative Commons Attribution-ShareAlike 4.0 International](LICENSES/CC-BY-SA-4.0.txt) (`CC-BY-SA-4.0`).
+
+Distributed modifications of the software must remain under the AGPL and provide access to the corresponding source code. The AGPL also applies to modified versions made available to users over a network. Shared adaptations of the educational materials must remain under CC BY-SA.
+
+Evidence, reports, and portfolio work created by students are not automatically covered by the project's licenses. See [LICENSES.md](LICENSES.md) for the complete licensing scope.
