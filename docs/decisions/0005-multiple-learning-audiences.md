@@ -148,9 +148,9 @@ scripts/
 
 teacher/
     README.md
-    lesson-plan.md
-    instructor-guide.md
-    teaching-notes.md 
+    plan-de-clase.md
+    guia-del-instructor.md
+    notas-de-ensenanza.md
 
 ---
 

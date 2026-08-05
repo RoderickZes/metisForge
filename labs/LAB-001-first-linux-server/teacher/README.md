@@ -1,11 +1,11 @@
-# Teacher Resources
+# Recursos para docentes
 
-This directory contains teaching material intended for instructors using Metis Forge in classrooms, workshops or community education.
+Este directorio contiene material didáctico destinado a los docentes que utilizan Metis Forge en aulas, talleres o programas de educación comunitaria.
 
-Unlike the student documentation, these resources focus on helping instructors explain concepts, guide discussions and facilitate practical activities.
+A diferencia de la documentación para estudiantes, estos recursos se centran en ayudar a los docentes a explicar conceptos, orientar debates y facilitar actividades prácticas.
 
 Contents:
 
-- lesson-plan.md
-- instructor-guide.md
-- teaching-notes.md
+- plan-de-clase.md
+- guia-del-instructor.md
+- notas-de-ensenanza.md
