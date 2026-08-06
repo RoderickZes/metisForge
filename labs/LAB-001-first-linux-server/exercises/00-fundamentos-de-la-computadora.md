@@ -290,4 +290,4 @@ En el próximo paso vas a identificar tu sistema operativo, abrir una terminal p
 
 Continuá en:
 
-`deployment/README.md`
+`../deployment/README.md`
