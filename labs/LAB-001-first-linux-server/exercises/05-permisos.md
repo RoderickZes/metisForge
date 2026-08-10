@@ -825,7 +825,9 @@ Respondé:
 
 Supongamos ahora que los integrantes del proyecto necesitan editar el mismo informe.
 
-Podemos agregar escritura al grupo utilizando notación simbólica:
+Hasta este momento, el grupo `proyecto` solamente tenía permiso de lectura sobre el archivo.
+
+Podemos agregar permiso de escritura al grupo utilizando notación simbólica:
 
 ```bash
 sudo chmod g+w /srv/metis-permisos/informe.txt
@@ -849,7 +851,7 @@ Su representación numérica es:
 660
 ```
 
-Volvé a intentar la modificación:
+Volvé a intentar la modificación utilizando la identidad de `brunolab`:
 
 ```bash
 sudo -u brunolab sh -c 'printf "Revisión de Bruno\n" >> /srv/metis-permisos/informe.txt'
@@ -861,15 +863,31 @@ Leé el resultado:
 cat /srv/metis-permisos/informe.txt
 ```
 
-La modificación debería funcionar.
+La modificación ahora debería funcionar.
 
-El cambio no se realizó porque apareció un error.
+No porque el intento anterior fuera un error del sistema: fue el comportamiento correcto con los permisos que estaban configurados en ese momento.
 
-Se realizó porque cambió el requisito:
+Funciona ahora porque cambiamos el requisito de forma deliberada:
 
 > Bruno ahora necesita colaborar en la edición del informe.
 
-Cada ampliación de permisos debe responder a una necesidad concreta.
+Por ese motivo agregamos permiso de escritura al grupo `proyecto`.
+
+El cambio de permisos no fue una forma de hacer desaparecer un error. Fue una modificación de la política de acceso para responder a una necesidad concreta.
+
+Esta distinción es importante:
+
+```text
+Error inesperado
+→ investigar la causa
+
+Nuevo requisito de acceso
+→ evaluar qué permiso necesita cambiar
+→ realizar el cambio mínimo necesario
+→ comprobar el resultado
+```
+
+Cada ampliación de permisos debe responder a una necesidad concreta y poder justificarse.
 
 ---
 
@@ -887,7 +905,7 @@ Configurá su propietario y grupo:
 sudo chown analab:proyecto /srv/metis-permisos/saludo.sh
 ```
 
-Asignale inicialmente:
+Asignale inicialmente los permisos:
 
 ```text
 640
@@ -915,7 +933,7 @@ El contenido existe y el propietario puede leerlo.
 
 Pero el archivo no tiene permiso de ejecución.
 
-Agregá ejecución solamente al propietario:
+Agregá permiso de ejecución solamente al propietario:
 
 ```bash
 sudo chmod u+x /srv/metis-permisos/saludo.sh
