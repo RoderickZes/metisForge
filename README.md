@@ -124,6 +124,22 @@ ROADMAP.md
 
 ---
 
+## Estado del proyecto
+
+**Versión:** 0.1 (Alpha)
+
+Metis Forge es un proyecto open source en desarrollo. El contenido estable actualmente es:
+
+- LAB-001 · First Linux Server | ✅ Completo 
+- Quick Mode · Windows | ✅ Disponible 
+- Quick Mode · macOS | ✅ Disponible 
+- Quick Mode · Linux | ✅ Disponible 
+- LAB-002 | 🚧 En planificación 
+
+La versión Alpha significa que el material ya puede utilizarse y probarse, pero seguirá recibiendo mejoras pedagógicas y correcciones a partir del feedback de estudiantes y profesionales.
+
+---
+
 # Getting Started
 
 If you're here to learn, begin with:
@@ -164,3 +180,5 @@ Metis Forge uses different copyleft licenses depending on the type of content:
 Distributed modifications of the software must remain under the AGPL and provide access to the corresponding source code. The AGPL also applies to modified versions made available to users over a network. Shared adaptations of the educational materials must remain under CC BY-SA.
 
 Evidence, reports, and portfolio work created by students are not automatically covered by the project's licenses. See [LICENSES.md](LICENSES.md) for the complete licensing scope.
+
+

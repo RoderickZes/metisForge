@@ -89,3 +89,5 @@ Dirigite ahora a:
 deployment/README.md
 
 Allí construirás el entorno del laboratorio y aprenderás por qué utilizamos contenedores antes de comenzar a administrar un servidor Linux.
+
+> Estado: Estable · Versión 1.0
