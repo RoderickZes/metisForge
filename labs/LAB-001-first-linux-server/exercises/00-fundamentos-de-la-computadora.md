@@ -46,22 +46,23 @@ Se espera que construyas un modelo mental que te sirva de base para todo lo que 
 
 ---
 
-# Hardware y software
+## Hardware y software
 
 Toda computadora, sin importar su forma o tamaño, puede dividirse en dos grandes partes.
 
+```text
 Computadora
 ├── Hardware
-│ ├── Procesador
-│ ├── Memoria RAM
-│ ├── Almacenamiento
-│ ├── Placa o interfaz de red
-│ └── Dispositivos de entrada y salida
-│
+│   ├── Procesador
+│   ├── Memoria RAM
+│   ├── Almacenamiento
+│   ├── Placa o interfaz de red
+│   └── Dispositivos de entrada y salida
 └── Software
-├── Sistema operativo
-├── Aplicaciones
-└── Archivos
+    ├── Sistema operativo
+    ├── Aplicaciones
+    └── Archivos
+```
 
 El **hardware** es la parte física: todo lo que podrías tocar si abrieras la computadora.
 
