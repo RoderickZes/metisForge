@@ -167,16 +167,15 @@ docker compose build --no-cache
 ---
 
 # Qué persiste y qué no
-
+'''text
 | Acción | ¿Se pierde tu trabajo? |
 |---|---|
 | `exit` | No. El contenedor sigue corriendo. |
 | `docker compose stop` / `start` | No. Es como apagar y prender un servidor. |
 | `docker compose restart` | No. |
 | `docker compose down` | Sí. El contenedor se elimina; el próximo `up` arranca de cero. |
-
+'''
 La imagen construida (`docker compose build`) no se pierde con `down` — solo se pierde el contenedor y lo que hiciste dentro de él.
-
 ---
 
 # Errores frecuentes
@@ -221,7 +220,7 @@ Antes de continuar, comprobá que podés responder:
 
 Con el laboratorio corriendo y sabiendo cómo entrar, salir y detenerlo, ya podés empezar a explorar el entorno Linux.
 
-Continuá con:
+## Continúa con
 
-`../exercises/01-entendiendo-tu-entorno.md`
+[01 — Entendiendo tu entorno](../exercises/01-entendiendo-tu-entorno.md)
 
