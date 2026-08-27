@@ -6,6 +6,7 @@ export default defineConfig({
   description: 'Aprendé infraestructura, Linux y ciberseguridad desde cero.',
   lang: 'es-AR',
   cleanUrls: true,
+  base: '/metisForge/',
 
   themeConfig: {
     siteTitle: 'Metis Forge',
