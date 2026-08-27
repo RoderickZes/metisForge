@@ -13,3 +13,8 @@ Thumbs.db
 
 # Temporary files
 *.tmp
+website/node_modules/
+website/.vitepress/dist/
+
+# VitePress cache
+website/.vitepress/cache/
