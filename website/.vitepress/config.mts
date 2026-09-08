@@ -11,14 +11,16 @@ export default defineConfig({
   themeConfig: {
     siteTitle: 'Metis Forge',
 
-    nav: [
-      { text: 'Inicio', link: '/' },
-      { text: 'LAB-001', link: '/lab-001/' },
-      {
-        text: 'GitHub',
-        link: 'https://github.com/RoderickZes/metisForge'
-      }
-    ],
+   nav: [
+  { text: 'Inicio', link: '/' },
+  { text: 'LAB-001', link: '/lab-001/' },
+  { text: 'Docs', link: '/docs/' },
+  {
+    text: 'GitHub',
+    link: 'https://github.com/RoderickZes/metisForge'
+  },
+  { text: 'Sobre el autor', link: '/about/' }
+  ],
 
 sidebar: {
   '/lab-001/': [
@@ -67,6 +69,13 @@ sidebar: {
 
     search: {
       provider: 'local'
-    }
+    },
+
+    footer: {
+  message: 'Metis Forge · Plataforma educativa open source',
+  copyright: 'Código AGPL-3.0 · Documentación CC BY-SA 4.0 © 2026 Rodrigo Zárraga'
+}
+
+    
   }
 })
