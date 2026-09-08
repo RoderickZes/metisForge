@@ -22,5 +22,5 @@ Metis Forge intenta resolver ese problema construyendo un recorrido donde cada l
 
 ## Enlaces
 
-- GitHub: <Link url="https://github.com/RoderickZes" title="github.com/RoderickZes"/>
-- LinkedIn: <LInk url="https://www.linkedin.com/in/rodrigozarraga/" title="LinkedIn"
+- GitHub: [github.com/RoderickZes](https://github.com/RoderickZes)
+- LinkedIn: [Rodrigo Zárraga](https://www.linkedin.com/in/rodrigozarraga/)
